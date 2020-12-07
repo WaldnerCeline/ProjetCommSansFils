@@ -63,13 +63,36 @@
    <property name="geometry">
     <rect>
      <x>140</x>
-     <y>320</y>
+     <y>390</y>
      <width>75</width>
      <height>23</height>
     </rect>
    </property>
    <property name="text">
     <string>Quitter</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Acquisition">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>320</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Acquisition</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="acquisition_lb">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>310</y>
+     <width>251</width>
+     <height>51</height>
+    </rect>
    </property>
   </widget>
  </widget>
