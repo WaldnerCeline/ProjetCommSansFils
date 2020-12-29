@@ -349,7 +349,7 @@
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>user.png</pixmap>
+    <pixmap>../user.png</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>
@@ -371,7 +371,7 @@
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>money.png</pixmap>
+    <pixmap>../money.png</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>
@@ -390,7 +390,7 @@
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>odalid.png</pixmap>
+    <pixmap>../odalid.png</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>
