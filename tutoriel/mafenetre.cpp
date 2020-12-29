@@ -65,12 +65,11 @@ void MaFenetre::on_Connect_clicked()
     else
         qDebug() << "[Connect]: une erreur s'est produite lors de l'appelle de la version";
 
-}
 
-void MaFenetre::on_saisi_clicked()
-{
-    QString Text = ui->fenetre_saisi->toPlainText();
-    qDebug() << "Text : " << Text;
+    status = Mf_Classic_Read_Value(&MonLecteur, TRUE, 14, &valeur,Auth_KeyB, 3);
+    on_Lecture_clicked();
+    ui->fenetreValeur->setText(QString::number(valeur));
+    ui->Pas->setValue(0);
 
 }
 
@@ -83,34 +82,96 @@ void MaFenetre::on_Quitter_clicked()
     qApp->quit();
 }
 
-void MaFenetre::on_Acquisition_clicked()
+
+
+//=============Lecture Ecriture================//
+void MaFenetre::on_Lecture_clicked()
 {
-    unsigned char data[240];
     int status = 0;
-    qDebug() << "[Acquisition]: Lancement de la fonction";
-    qDebug() << "[Acquisition]: affichage de la data avant appel de la fonction:" << key_ff;
     status = LEDBuzzer(&MonLecteur, LED_YELLOW_ON);
-    if(status !=MI_OK)
-    {
-        qDebug() << "[Acquisition]: ERREUR affichage de la led jaune";
-    }
 
-    status = Mf_Classic_LoadKey(&MonLecteur, Auth_KeyA , key_ff, 2);
-    if (status != MI_OK){
-        qDebug() << "Load Key [FAILED]\n";
-        return;
-    }
-    status = Mf_Classic_LoadKey(&MonLecteur, Auth_KeyB , key_ff, 2);
-    if (status != MI_OK){
-        qDebug() << "Load Key [FAILED]\n";
-        return;
-    }
-    // RF field ON
     RF_Power_Control(&MonLecteur, TRUE, 0);
+    status = ISO14443_3_A_PollCard(&MonLecteur, atq, sak, uid, &uid_len);
 
-    status = Mf_Classic_Read_Block(&MonLecteur,TRUE,9,data, Auth_KeyA, 2);
-    for (int i = 0; i < 240; i++){
-        //print data bruh
+    unsigned char dataNom[10];
+    unsigned char dataPrenom[10];
+
+    status = Mf_Classic_Read_Block(&MonLecteur, TRUE, 10, dataNom, Auth_KeyA, 2);
+    status = Mf_Classic_Read_Block(&MonLecteur, TRUE, 9, dataPrenom, Auth_KeyA, 2);
+
+    QString nom = "";
+    QString prenom = "";
+
+    for (int i = 0; i < 10; i++){
+        nom += dataNom[i];
+        prenom += dataPrenom[i];
+    }
+    ui->fenetreNom->setText(nom);
+    ui->fenetrePrenom->setText(prenom);
+    status = LEDBuzzer(&MonLecteur, LED_RED_OFF);
+
 }
+
+void MaFenetre::on_Ecriture_clicked(){
+    char nom[10];
+    char prenom[10];
+    for(int i = 0; i<10; i++)
+    {
+        nom[i] = ' ';
+        prenom[i] = ' ';
+    }
+
+    unsigned char u_nom[10];
+    unsigned char u_prenom[10];
+    status = LEDBuzzer(&MonLecteur, LED_YELLOW_ON);
+
+    RF_Power_Control(&MonLecteur, TRUE, 0);
+    status = ISO14443_3_A_PollCard(&MonLecteur, atq, sak, uid, &uid_len);
+
+    sprintf(nom, ui->fenetreNom->toPlainText().toUtf8().data(), 10);
+    sprintf(prenom, ui->fenetrePrenom->toPlainText().toUtf8().data(), 10);
+    for(int i = 0; i<10; i++)
+    {
+        u_nom[i] = nom[i];
+        u_prenom[i] = prenom[i];
+    }
+    status = Mf_Classic_Write_Block(&MonLecteur, TRUE, 10, u_nom, Auth_KeyB, 2);
+    status = Mf_Classic_Write_Block(&MonLecteur, TRUE, 9, u_prenom, Auth_KeyB, 2);
+    status = LEDBuzzer(&MonLecteur, LED_RED_OFF);
+
+}
+//========================================//
+
+
+
+//===============INCREMENT=================//
+
+void MaFenetre::on_Plus_clicked(){
+    status = 0;
+    status = LEDBuzzer(&MonLecteur, LED_RED_ON);
+
+    RF_Power_Control(&MonLecteur, TRUE, 0);
+    status = ISO14443_3_A_PollCard(&MonLecteur, atq, sak, uid, &uid_len);
+    uint32_t valeur;
+    status = Mf_Classic_Increment_Value(&MonLecteur ,TRUE, 14, ui->Pas->value(), 14, Auth_KeyB, 3);
+    status = Mf_Classic_Read_Value(&MonLecteur, TRUE, 14, &valeur,Auth_KeyB, 3);
+
+    ui->fenetreValeur->setText(QString::number((int)valeur));
+    status = LEDBuzzer(&MonLecteur, LED_RED_OFF);
+}
+
+void MaFenetre::on_Moins_clicked(){
+    status = 0;
+    status = LEDBuzzer(&MonLecteur, LED_RED_ON);
+    RF_Power_Control(&MonLecteur, TRUE, 0);
+    status = ISO14443_3_A_PollCard(&MonLecteur, atq, sak, uid, &uid_len);
+    uint32_t valeur;
+    status = Mf_Classic_Decrement_Value(&MonLecteur ,TRUE, 14, ui->Pas->value(), 14, Auth_KeyB, 3);
+    status = Mf_Classic_Read_Value(&MonLecteur, TRUE, 14, &valeur,Auth_KeyB, 3);
+
+    ui->fenetreValeur->setText(QString::number((int)valeur));
+    status = LEDBuzzer(&MonLecteur, LED_RED_OFF);
+}
+
 //========================================//
 

@@ -20,9 +20,12 @@ class MaFenetre : public QWidget
 
     private slots:
         void on_Connect_clicked();
-        void on_saisi_clicked();
         void on_Quitter_clicked();
-        void on_Acquisition_clicked();
+        void on_Lecture_clicked();
+        void on_Ecriture_clicked();
+        void on_Plus_clicked();
+        void on_Moins_clicked();
+
 
     private:
         Ui::MaFenetre *ui;
@@ -33,6 +36,7 @@ class MaFenetre : public QWidget
         BYTE atq[2];
         BYTE sak[1];
         BYTE uid[12];
+        uint32_t valeur;
         uint16_t uid_len = 12;
         BYTE sect_count = 0;
 };

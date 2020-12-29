@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.13.3, 2020-12-29T17:47:52. -->
+<!-- Written by QtCreator 4.13.3, 2020-12-14T17:29:51. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
-  <value type="QByteArray">{0cefdbd2-5220-4df9-b489-6d64a6c0d03c}</value>
+  <value type="QByteArray">{9382db66-9cd4-4e6f-b365-cca06e75afd4}</value>
  </data>
  <data>
   <variable>ProjectExplorer.Project.ActiveTarget</variable>
@@ -96,8 +96,8 @@
    <valuemap type="QVariantMap" key="ProjectExplorer.Target.BuildConfiguration.0">
     <value type="bool">true</value>
     <value type="int" key="EnableQmlDebugging">0</value>
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">C:\Users\ac558780\Downloads\ProjetCommSansFils-main\ProjetCommSansFils-main\build-TutoQt-Desktop_Qt_5_15_2_MinGW_64_bit-Debug</value>
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory.shadowDir">C:/Users/ac558780/Downloads/ProjetCommSansFils-main/ProjetCommSansFils-main/build-TutoQt-Desktop_Qt_5_15_2_MinGW_64_bit-Debug</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">C:\Users\ac558780\Downloads\ProjetCommSansFils-main\build-TutoQt-Desktop_Qt_5_15_2_MinGW_64_bit-Debug</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory.shadowDir">C:/Users/ac558780/Downloads/ProjetCommSansFils-main/build-TutoQt-Desktop_Qt_5_15_2_MinGW_64_bit-Debug</value>
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
       <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
@@ -148,8 +148,8 @@
    <valuemap type="QVariantMap" key="ProjectExplorer.Target.BuildConfiguration.1">
     <value type="bool">true</value>
     <value type="int" key="EnableQmlDebugging">2</value>
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">C:\Users\ac558780\Downloads\ProjetCommSansFils-main\ProjetCommSansFils-main\build-TutoQt-Desktop_Qt_5_15_2_MinGW_64_bit-Release</value>
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory.shadowDir">C:/Users/ac558780/Downloads/ProjetCommSansFils-main/ProjetCommSansFils-main/build-TutoQt-Desktop_Qt_5_15_2_MinGW_64_bit-Release</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">C:\Users\ac558780\Downloads\ProjetCommSansFils-main\build-TutoQt-Desktop_Qt_5_15_2_MinGW_64_bit-Release</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory.shadowDir">C:/Users/ac558780/Downloads/ProjetCommSansFils-main/build-TutoQt-Desktop_Qt_5_15_2_MinGW_64_bit-Release</value>
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
       <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
@@ -200,8 +200,8 @@
    <valuemap type="QVariantMap" key="ProjectExplorer.Target.BuildConfiguration.2">
     <value type="bool">true</value>
     <value type="int" key="EnableQmlDebugging">0</value>
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">C:\Users\ac558780\Downloads\ProjetCommSansFils-main\ProjetCommSansFils-main\build-TutoQt-Desktop_Qt_5_15_2_MinGW_64_bit-Profile</value>
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory.shadowDir">C:/Users/ac558780/Downloads/ProjetCommSansFils-main/ProjetCommSansFils-main/build-TutoQt-Desktop_Qt_5_15_2_MinGW_64_bit-Profile</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">C:\Users\ac558780\Downloads\ProjetCommSansFils-main\build-TutoQt-Desktop_Qt_5_15_2_MinGW_64_bit-Profile</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory.shadowDir">C:/Users/ac558780/Downloads/ProjetCommSansFils-main/build-TutoQt-Desktop_Qt_5_15_2_MinGW_64_bit-Profile</value>
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
       <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
@@ -325,8 +325,8 @@
     <valuelist type="QVariantList" key="CustomOutputParsers"/>
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:C:/Users/ac558780/Downloads/ProjetCommSansFils-main/ProjetCommSansFils-main/tutoriel/TutoQt.pro</value>
-    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">C:/Users/ac558780/Downloads/ProjetCommSansFils-main/ProjetCommSansFils-main/tutoriel/TutoQt.pro</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:C:/Users/ac558780/Downloads/ProjetCommSansFils-main/tutoriel/TutoQt.pro</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">C:/Users/ac558780/Downloads/ProjetCommSansFils-main/tutoriel/TutoQt.pro</value>
     <value type="QString" key="RunConfiguration.Arguments"></value>
     <value type="bool" key="RunConfiguration.Arguments.multi">false</value>
     <value type="QString" key="RunConfiguration.OverrideDebuggerStartup"></value>
@@ -337,7 +337,7 @@
     <value type="bool" key="RunConfiguration.UseQmlDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
     <value type="QString" key="RunConfiguration.WorkingDirectory"></value>
-    <value type="QString" key="RunConfiguration.WorkingDirectory.default">C:/Users/ac558780/Downloads/ProjetCommSansFils-main/ProjetCommSansFils-main/build-TutoQt-Desktop_Qt_5_15_2_MinGW_64_bit-Debug</value>
+    <value type="QString" key="RunConfiguration.WorkingDirectory.default">C:/Users/ac558780/Downloads/ProjetCommSansFils-main/build-TutoQt-Desktop_Qt_5_15_2_MinGW_64_bit-Debug</value>
    </valuemap>
    <value type="int" key="ProjectExplorer.Target.RunConfigurationCount">1</value>
   </valuemap>
